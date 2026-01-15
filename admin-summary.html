@@ -1,0 +1,80 @@
+<div class="app-title">
+    <div class="title-h">
+        <h1><i class="bi bi-bar-chart-fill"></i> สรุปผลการดำเนินงานทั้งหมด</h1>
+        <p>ภาพรวมความก้าวหน้าของทุกนโยบาย แยกตามสหวิทยาเขตและโรงเรียน</p>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="tile">
+            <h3 class="tile-title mb-4"><i class="bi bi-graph-up"></i> สรุปตามนโยบาย</h3>
+            <div class="table-responsive">
+                <table class="table table-hover table-bordered" id="policy-summary-table">
+                    <thead class="table-primary text-center">
+                        <tr>
+                            <th style="width: 5%;">ลำดับ</th>
+                            <th style="width: 35%;">นโยบาย</th>
+                            <th style="width: 10%;">จำนวนข้อ</th>
+                            <th style="width: 10%;">ส่งแล้ว</th>
+                            <th style="width: 10%;">รอดำเนินการ</th>
+                            <th style="width: 30%;">ความคืบหน้า</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td colspan="6" class="text-center">
+                                <div class="spinner-border text-primary"></div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="tile">
+            <h3 class="tile-title mb-4"><i class="bi bi-diagram-3-fill"></i> สรุปตามสหวิทยาเขต</h3>
+            <div class="table-responsive">
+                <table class="table table-hover table-bordered" id="area-summary-detail-table">
+                    <thead class="table-success text-center">
+                        <tr>
+                            <th style="width: 5%;">ลำดับ</th>
+                            <th style="width: 25%;">สหวิทยาเขต</th>
+                            <th style="width: 10%;">จำนวนโรงเรียน</th>
+                            <th style="width: 10%;">ส่งครบ</th>
+                            <th style="width: 10%;">ส่งบางส่วน</th>
+                            <th style="width: 10%;">ยังไม่ส่ง</th>
+                            <th style="width: 30%;">ความคืบหน้าเฉลี่ย</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td colspan="7" class="text-center">
+                                <div class="spinner-border text-success"></div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-6">
+        <div class="tile">
+            <h3 class="tile-title mb-4"><i class="bi bi-pie-chart-fill"></i> กราฟสรุปภาพรวม</h3>
+            <canvas id="overallChart" style="max-height: 400px;"></canvas>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="tile">
+            <h3 class="tile-title mb-4"><i class="bi bi-bar-chart-line-fill"></i> กราฟแยกตามนโยบาย</h3>
+            <canvas id="policyChart" style="max-height: 400px;"></canvas>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>โปรแกรมการนิเทศติดตาม สพม.พิษณุโลก อุตรดิตถ์</title>
+
+  <!-- Modern Login CSS -->
+  <link rel="stylesheet" type="text/css" href="css/modern-login.css" />
+
+  <!-- Font-icon -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
+</head>
+
+<body>
+  <!-- Background Animation -->
+  <ul class="bg-circles">
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+  </ul>
+
+  <div class="login-container">
+    <div class="logo">
+      <img src="https://img5.pic.in.th/file/secure-sv1/Untitled-design0bb67699eadca36d.png" alt="Logo" />
+    </div>
+
+    <h3 class="login-head">เข้าสู่ระบบ</h3>
+
+    <form class="login-form" onsubmit="login(event)">
+      <div class="input-group">
+        <label for="username">ชื่อผู้ใช้</label>
+        <input id="username" type="text" placeholder="กรอกชื่อผู้ใช้..." autofocus required />
+      </div>
+
+      <div class="input-group">
+        <label for="password">รหัสผ่าน</label>
+        <input id="password" type="password" placeholder="กรอกรหัสผ่าน..." required />
+      </div>
+
+      <button type="submit" class="btn-login">
+        <i class="bi bi-box-arrow-in-right"></i> เข้าสู่ระบบ
+      </button>
+
+      <div id="error"></div>
+    </form>
+
+    <div class="footer-text">
+      โปรแกรมนิเทศ ติดตาม และประเมินผลการจัดการศึกษา<br>
+      พัฒนาโดย นายอนลัส คาลเคล ศึกษานิเทศก์ชำนาญการ<br>
+      สำนักงานเขตพื้นที่การศึกษามัธยมศึกษาพิษณุโลก อุตรดิตถ์<br>
+      © 2025 All rights reserved.
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <!-- Supabase SDK -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="js/config.js"></script>
+  <script src="js/init-supabase.js"></script>
+  <script src="js/login.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,84 @@
+<div class="app-title">
+  <div class="title-h">
+    <h1><i class="app-menu__icon bi bi-person-bounding-box"></i> ข้อมูลผู้รายงาน </h1>
+    <p> ผู้รายงานข้อมูลนโยบายการจัดการศึกษา </p>
+  </div>
+</div>
+
+
+<div class="row">
+  <div class="col-md-5">
+    <div class="tile">
+      <div class="tile-body">
+        <div class="text-center mb-3">
+          <div id="updateMessage" class="mb-3"></div>
+          <img id="picOutput" class="mb-3 img-circle-crop border border-5 border-light" alt="" width="150" height="150"
+            onerror="this.onerror=null;this.src='https://st3.depositphotos.com/15648834/17930/v/600/depositphotos_179308454-stock-illustration-unknown-person-silhouette-glasses-profile.jpg'">
+
+        </div>
+        <div class="tile-body">
+          <div class="mb-2 ms-2 col-md-11">
+            <div class="row mb-3">
+              <div class="col-md-4"> ชื่อ - นามสกุล </div>
+              <div class="col-md-8 text-white progress-bar-striped bg-danger" id="nameOutput"> </div>
+            </div>
+            <div class="row mb-3">
+              <div class="col-md-4"> E-mail </div>
+              <div class="col-md-8 text-white progress-bar-striped bg-warning" id="emailOutput"> </div>
+            </div>
+            <div class="row mb-3">
+              <div class="col-md-4"> เบอร์โทรศัพท์ </div>
+              <div class="col-md-8 text-white progress-bar-striped bg-info" id="phoneOutput"> </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="col-md-7">
+    <div class="tile">
+      <div class="tile-bottom">
+        <h3 class="tile-title"> แก้ไขผู้รายงานข้อมูล </h3>
+      </div>
+
+      <div class="tile-body">
+        <form id="updateForm">
+          <div class="col-md-12 mb-3">
+            <label class="form-label"> ชื่อ - นามสกุล </label>
+            <input id="nameInput" class="form-control" type="text" placeholder="โปรดระบุคำนำหน้า เช่น นายไก่ คราม"
+              required>
+          </div>
+          <div class="col-md-12 mb-3">
+            <label class="form-label"> E-mail </label>
+            <input id="emailInput" class="form-control" type="email" placeholder="@gmail.com หรือ อีเมลในเครือต้นสังกัด"
+              required>
+          </div>
+          <div class="col-md-12 mb-3">
+            <label class="form-label"> เบอร์โทรศัพท์ </label>
+            <input type="text" id="phoneInput" class="form-control" maxlength="10" placeholder="กรอกเบอร์ 10 หลัก"
+              oninput="this.value = this.value.replace(/[^0-9]/g, '').slice(0,10)" required>
+          </div>
+          <div class="col-md-12 mb-3">
+            <label class="form-label"> อัปโหลดภาพ </label>
+            <input id="picInput" class="form-control" type="file" accept="image/*" required>
+          </div>
+          <div class="">
+            <button class="btn btn-primary col-md-12" type="submit">
+              <i class=" bi bi-check-circle-fill me-2"></i> บันทึกข้อมูล
+            </button>
+            <!--  <div id="editMessage" style="margin-left: 10px;"></div> -->
+          </div>
+
+          <div id="loadingPopup" class="loading-overlay" style="display: none;">
+            <div class="spinner"></div>
+            <p style="color: white;">กำลังบันทึกข้อมูล...</p>
+          </div>
+
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,211 @@
+<div class="app-title">
+    <div class="title-h">
+        <h1><i class="bi bi-clipboard-check"></i> รายงานการนิเทศ (การประกันคุณภาพภายใน)</h1>
+        <p>ตรวจสอบและให้ข้อเสนอแนะ - สำหรับเขตพื้นที่และสหวิทยาเขต</p>
+    </div>
+</div>
+
+<div class="tile mb-4">
+    <div class="row">
+        <div class="col-md-5 mb-3">
+            <label class="form-label fw-bold">เลือกสหวิทยาเขต</label>
+            <select id="qa-area-select" class="form-select">
+                <option value="">-- กำลังโหลด --</option>
+            </select>
+        </div>
+        <div class="col-md-5 mb-3">
+            <label class="form-label fw-bold">เลือกโรงเรียน</label>
+            <select id="qa-school-select" class="form-select" disabled>
+                <option value="">-- กรุณาเลือกสหวิทยาเขตก่อน --</option>
+            </select>
+        </div>
+        <div class="col-md-2 mb-3 d-flex align-items-end">
+            <button class="btn btn-primary w-100" onclick="window.loadQAReport()">
+                <i class="bi bi-search"></i> ดูข้อมูล
+            </button>
+        </div>
+    </div>
+</div>
+
+<div id="qa-report-content" style="display:none;">
+    <div class="tile">
+        <div class="d-flex justify-content-between align-items-center mb-3">
+            <h3 class="tile-title mb-0 text-primary" id="school-title">โรงเรียน...</h3>
+            <div>
+                <span class="badge bg-secondary" id="last-updated-badge">-</span>
+            </div>
+        </div>
+
+        <div id="form-display-container">
+            <!-- Part 1 -->
+            <div class="card mb-4 border-info">
+                <div class="card-header bg-info text-white fw-bold d-flex justify-content-between">
+                    <span>ส่วนที่ 1 การวางแผน (Plan)</span>
+                    <button class="btn btn-sm btn-light text-info" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseP1">
+                        <i class="bi bi-chevron-down"></i>
+                    </button>
+                </div>
+                <div class="collapse show" id="collapseP1">
+                    <div class="card-body bg-light">
+                        <div id="p1-content">กำลังโหลดข้อมูล...</div>
+
+                        <!-- Feedback Box for Part 1 (Optional/Future: If user wants specific feedback per part) -->
+                        <!-- Currently single feedback is simpler, but user asked for "fill in parts". 
+                             Let's add a feedback box specifically here if they want granular feedback?
+                             User said: "provide feedback in sections". 
+                             This implies: Feedback for Part 1, Feedback for Part 2...
+                             Let's add input fields for Area/Admin here.
+                        -->
+                        <hr class="border-secondary">
+                        <div class="row">
+                            <div class="col-md-6 feedback-area">
+                                <label class="form-label text-primary fw-bold small"><i class="bi bi-chat-dots"></i>
+                                    ข้อเสนอแนะ Area (ส่วนที่ 1)</label>
+                                <textarea id="area-comment-p1" class="form-control form-control-sm" rows="2"
+                                    placeholder="ระบุข้อเสนอแนะ..."></textarea>
+                            </div>
+                            <div class="col-md-6 feedback-admin">
+                                <label class="form-label text-warning fw-bold small"><i
+                                        class="bi bi-person-workspace"></i>
+                                    ข้อเสนอแนะ Admin (ส่วนที่ 1)</label>
+                                <textarea id="admin-comment-p1" class="form-control form-control-sm" rows="2"
+                                    placeholder="ระบุข้อเสนอแนะ..."></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Part 2 -->
+            <div class="card mb-4 border-success">
+                <div class="card-header bg-success text-white fw-bold d-flex justify-content-between">
+                    <span>ส่วนที่ 2 การดำเนินงาน (Do)</span>
+                    <button class="btn btn-sm btn-light text-success" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseP2">
+                        <i class="bi bi-chevron-down"></i>
+                    </button>
+                </div>
+                <div class="collapse show" id="collapseP2">
+                    <div class="card-body bg-light">
+                        <div id="p2-content">...</div>
+                        <hr class="border-secondary">
+                        <div class="row">
+                            <div class="col-md-6 feedback-area">
+                                <label class="form-label text-primary fw-bold small"><i class="bi bi-chat-dots"></i>
+                                    ข้อเสนอแนะ Area (ส่วนที่ 2)</label>
+                                <textarea id="area-comment-p2" class="form-control form-control-sm" rows="2"></textarea>
+                            </div>
+                            <div class="col-md-6 feedback-admin">
+                                <label class="form-label text-warning fw-bold small"><i
+                                        class="bi bi-person-workspace"></i>
+                                    ข้อเสนอแนะ Admin (ส่วนที่ 2)</label>
+                                <textarea id="admin-comment-p2" class="form-control form-control-sm"
+                                    rows="2"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Part 3 -->
+            <div class="card mb-4 border-warning">
+                <div class="card-header bg-warning text-dark fw-bold d-flex justify-content-between">
+                    <span>ส่วนที่ 3 การตรวจสอบและประเมินผล (Check)</span>
+                    <button class="btn btn-sm btn-dark text-warning" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseP3">
+                        <i class="bi bi-chevron-down"></i>
+                    </button>
+                </div>
+                <div class="collapse show" id="collapseP3">
+                    <div class="card-body bg-light">
+                        <div id="p3-content">...</div>
+                        <hr class="border-secondary">
+                        <div class="row">
+                            <div class="col-md-6 feedback-area">
+                                <label class="form-label text-primary fw-bold small"><i class="bi bi-chat-dots"></i>
+                                    ข้อเสนอแนะ Area (ส่วนที่ 3)</label>
+                                <textarea id="area-comment-p3" class="form-control form-control-sm" rows="2"></textarea>
+                            </div>
+                            <div class="col-md-6 feedback-admin">
+                                <label class="form-label text-warning fw-bold small"><i
+                                        class="bi bi-person-workspace"></i> ข้อเสนอแนะ Admin (ส่วนที่ 3)</label>
+                                <textarea id="admin-comment-p3" class="form-control form-control-sm"
+                                    rows="2"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Part 4 -->
+            <div class="card mb-4 border-danger">
+                <div class="card-header bg-danger text-white fw-bold d-flex justify-content-between">
+                    <span>ส่วนที่ 4 การปรับปรุงและพัฒนา (Act)</span>
+                    <button class="btn btn-sm btn-light text-danger" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseP4">
+                        <i class="bi bi-chevron-down"></i>
+                    </button>
+                </div>
+                <div class="collapse show" id="collapseP4">
+                    <div class="card-body bg-light">
+                        <div id="p4-content">...</div>
+                        <hr class="border-secondary">
+                        <div class="row">
+                            <div class="col-md-6 feedback-area">
+                                <label class="form-label text-primary fw-bold small"><i class="bi bi-chat-dots"></i>
+                                    ข้อเสนอแนะ Area (ส่วนที่ 4)</label>
+                                <textarea id="area-comment-p4" class="form-control form-control-sm" rows="2"></textarea>
+                            </div>
+                            <div class="col-md-6 feedback-admin">
+                                <label class="form-label text-warning fw-bold small"><i
+                                        class="bi bi-person-workspace"></i> ข้อเสนอแนะ Admin (ส่วนที่ 4)</label>
+                                <textarea id="admin-comment-p4" class="form-control form-control-sm"
+                                    rows="2"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Part 5 -->
+            <div class="card mb-4 border-secondary">
+                <div class="card-header bg-secondary text-white fw-bold d-flex justify-content-between">
+                    <span>ส่วนที่ 5 ปัญหา อุปสรรค และความต้องการ</span>
+                    <button class="btn btn-sm btn-light text-secondary" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseP5">
+                        <i class="bi bi-chevron-down"></i>
+                    </button>
+                </div>
+                <div class="collapse show" id="collapseP5">
+                    <div class="card-body bg-light">
+                        <div id="p5-content">...</div>
+                        <hr class="border-secondary">
+                        <div class="row">
+                            <div class="col-md-6 feedback-area">
+                                <label class="form-label text-primary fw-bold small"><i class="bi bi-chat-dots"></i>
+                                    ข้อเสนอแนะ Area (ส่วนที่ 5)</label>
+                                <textarea id="area-comment-p5" class="form-control form-control-sm" rows="2"></textarea>
+                            </div>
+                            <div class="col-md-6 feedback-admin">
+                                <label class="form-label text-warning fw-bold small"><i
+                                        class="bi bi-person-workspace"></i> ข้อเสนอแนะ Admin (ส่วนที่ 5)</label>
+                                <textarea id="admin-comment-p5" class="form-control form-control-sm"
+                                    rows="2"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div> <!-- End Container -->
+
+        <!-- Global Save Button -->
+        <div class="tile-footer text-end sticky-bottom bg-white p-3 border-top shadow-lg">
+            <button id="btn-save-feedback" class="btn btn-primary btn-lg" onclick="window.saveAllFeedback()">
+                <i class="bi bi-save"></i> บันทึกข้อเสนอแนะทั้งหมด
+            </button>
+        </div>
+
+    </div>
+</div>

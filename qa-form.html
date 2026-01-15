@@ -1,0 +1,329 @@
+<div class="app-title">
+    <div class="title-h">
+        <h1><i class="bi bi-clipboard-check"></i> แบบนิเทศ ติดตามการดำเนินงานประกันคุณภาพภายใน</h1>
+        <p>แบบประเมินสำหรับโรงเรียน - สำนักงานเขตพื้นที่การศึกษามัธยมศึกษาพิษณุโลก อุตรดิตถ์</p>
+    </div>
+</div>
+
+<div class="tile">
+    <!-- Status Bar -->
+    <div id="status-bar" class="alert alert-secondary text-center mb-4">
+        <i class="bi bi-info-circle"></i> สถานะ: <span id="form-status">กำลังโหลด...</span>
+        <span id="last-updated" class="d-block small mt-1"></span>
+    </div>
+
+    <form id="qaForm" onsubmit="event.preventDefault(); window.saveQAForm();">
+
+        <!-- Part 1 -->
+        <div class="card mb-4 border-info">
+            <div class="card-header bg-info text-white fw-bold">ส่วนที่ 1 การวางแผน (Plan)</div>
+            <div class="card-body">
+
+                <h5 class="text-primary mt-3">1.1 การจัดทำแผนพัฒนาการจัดการศึกษา</h5>
+                <div class="mb-3">
+                    <label class="form-label fw-bold">โรงเรียนมีแผนพัฒนาการจัดการศึกษา</label>
+                    <div>
+                        <input type="radio" class="btn-check" name="p1_1_has_plan" id="p1_1_has_plan_yes" value="true"
+                            autocomplete="off">
+                        <label class="btn btn-outline-success" for="p1_1_has_plan_yes">มี</label>
+
+                        <input type="radio" class="btn-check" name="p1_1_has_plan" id="p1_1_has_plan_no" value="false"
+                            autocomplete="off">
+                        <label class="btn btn-outline-danger" for="p1_1_has_plan_no">ไม่มี</label>
+                    </div>
+                </div>
+
+                <div class="mb-3 row">
+                    <label class="col-sm-3 col-form-label">ระยะเวลาในการดำเนินงานตามแผน</label>
+                    <div class="col-sm-4">
+                        <div class="input-group">
+                            <span class="input-group-text">ตั้งแต่ พ.ศ.</span>
+                            <input type="number" class="form-control" name="p1_1_start_year" placeholder="xxxx">
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="input-group">
+                            <span class="input-group-text">ถึง พ.ศ.</span>
+                            <input type="number" class="form-control" name="p1_1_end_year" placeholder="xxxx">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label fw-bold">องค์ประกอบของแผน (เลือกได้มากกว่า 1 ข้อ)</label>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="p1_1_composition" value="basic_info"
+                            id="p1_comp_1">
+                        <label class="form-check-label" for="p1_comp_1">ข้อมูลและสารสนเทศพื้นฐานของสถานศึกษา</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="p1_1_composition" value="analysis"
+                            id="p1_comp_2">
+                        <label class="form-check-label" for="p1_comp_2">การวิเคราะห์บริบท สภาพปัจจุบัน ปัญหา
+                            และความต้องการจำเป็น</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="p1_1_composition" value="vision"
+                            id="p1_comp_3">
+                        <label class="form-check-label" for="p1_comp_3">วิสัยทัศน์ พันธกิจ เป้าประสงค์</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="p1_1_composition" value="strategy"
+                            id="p1_comp_4">
+                        <label class="form-check-label" for="p1_comp_4">ยุทธศาสตร์/กลยุทธ์
+                            และตัวชี้วัดความสำเร็จ</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="p1_1_composition" value="targets"
+                            id="p1_comp_5">
+                        <label class="form-check-label" for="p1_comp_5">ค่าเป้าหมายความสำเร็จ (3-5 ปี)</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="p1_1_composition" value="roles"
+                            id="p1_comp_6">
+                        <label class="form-check-label" for="p1_comp_6">การกำหนดบทบาทหน้าที่ของผู้เกี่ยวข้อง</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="p1_1_composition" value="participation"
+                            id="p1_comp_7">
+                        <label class="form-check-label" for="p1_comp_7">การมีส่วนร่วมของผู้มีส่วนได้ส่วนเสีย</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="p1_1_composition" value="appendix"
+                            id="p1_comp_8">
+                        <label class="form-check-label" for="p1_comp_8">ภาคผนวก
+                            (คำสั่งแต่งตั้งคณะกรรมการ/การอนุมัติแผน)</label>
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">ข้อค้นพบ/ข้อสังเกต</label>
+                    <textarea class="form-control" name="p1_1_note" rows="2"></textarea>
+                </div>
+
+                <hr>
+
+                <h5 class="text-primary mt-3">1.2 การกำหนดมาตรฐานการศึกษาและค่าเป้าหมาย</h5>
+                <div class="mb-3">
+                    <div class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" name="p1_2_has_standard" id="p1_2_has_standard">
+                        <label class="form-check-label"
+                            for="p1_2_has_standard">มีการกำหนดมาตรฐานการศึกษาและค่าเป้าหมายของสถานศึกษา</label>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">ค่าเป้าหมายสอดคล้องกับบริบทและสภาพ</label>
+                    <div>
+                        <input type="radio" class="btn-check" name="p1_2_target_consistency" id="p1_2_consis_yes"
+                            value="consistent" autocomplete="off">
+                        <label class="btn btn-outline-success" for="p1_2_consis_yes">สอดคล้อง</label>
+
+                        <input type="radio" class="btn-check" name="p1_2_target_consistency" id="p1_2_consis_no"
+                            value="improve" autocomplete="off">
+                        <label class="btn btn-outline-warning" for="p1_2_consis_no">ควรปรับปรุง</label>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">ข้อค้นพบ/ข้อสังเกต</label>
+                    <textarea class="form-control" name="p1_2_note" rows="2"></textarea>
+                </div>
+            </div>
+        </div>
+
+        <!-- Part 2 -->
+        <div class="card mb-4 border-success">
+            <div class="card-header bg-success text-white fw-bold">ส่วนที่ 2 การดำเนินงาน (Do)</div>
+            <div class="card-body">
+                <h5 class="text-success mt-3">2.1 การจัดทำแผนปฏิบัติการประจำปี/แผนงบประมาณ</h5>
+                <div class="mb-3">
+                    <div class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" name="p2_1_has_action_plan"
+                            id="p2_1_has_action_plan">
+                        <label class="form-check-label" for="p2_1_has_action_plan">มีแผนปฏิบัติการประจำปี</label>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label fw-bold">แผนสอดคล้องกับ</label>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="p2_1_consistency" value="dev_plan">
+                        <label class="form-check-label">แผนพัฒนาการจัดการศึกษา</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="p2_1_consistency" value="standards">
+                        <label class="form-check-label">มาตรฐานการศึกษาของสถานศึกษา</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="p2_1_consistency" value="sar">
+                        <label class="form-check-label">ผลการประเมินตนเอง (SAR) ปีที่ผ่านมา</label>
+                    </div>
+                </div>
+
+                <hr>
+
+                <h5 class="text-success mt-3">2.2 การดำเนินงานตามแผน</h5>
+                <div class="mb-3">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="p2_2_activities_complete">
+                        <label class="form-check-label">ดำเนินกิจกรรม/โครงการตามแผนครบถ้วน</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="p2_2_resources_alloc">
+                        <label class="form-check-label">มีการจัดสรรทรัพยากรอย่างเหมาะสม</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="p2_2_record_evidence">
+                        <label class="form-check-label">มีการบันทึกหลักฐาน/ร่องรอยการดำเนินงาน</label>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">ข้อค้นพบ/ข้อสังเกต</label>
+                    <textarea class="form-control" name="p2_2_note" rows="2"></textarea>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Part 3 -->
+        <div class="card mb-4 border-warning">
+            <div class="card-header bg-warning text-dark fw-bold">ส่วนที่ 3 การตรวจสอบและประเมินผล (Check)</div>
+            <div class="card-body">
+                <h5 class="text-dark mt-3">3.1 การประเมินคุณภาพภายในและรายงาน SAR</h5>
+                <div class="mb-3">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="p3_1_eval_complete">
+                        <label
+                            class="form-check-label">มีการประเมินผลการดำเนินกิจกรรม/โครงการตามแผนปฏิบัติการประจำปีครบถ้วน</label>
+                    </div>
+                </div>
+                <div class="mb-3 row">
+                    <label class="col-sm-4 col-form-label">มีรายงานการประเมินตนเอง (SAR)</label>
+                    <div class="col-sm-8">
+                        <input type="radio" class="btn-check" name="p3_1_has_sar" id="p3_sar_yes" value="true"
+                            autocomplete="off">
+                        <label class="btn btn-outline-success btn-sm" for="p3_sar_yes">มี</label>
+                        <input type="radio" class="btn-check" name="p3_1_has_sar" id="p3_sar_no" value="false"
+                            autocomplete="off">
+                        <label class="btn btn-outline-danger btn-sm" for="p3_sar_no">ไม่มี</label>
+                    </div>
+                </div>
+                <div class="mb-3 row">
+                    <label class="col-sm-4 col-form-label">รูปแบบ SAR เป็นไปตามแนวทางที่กำหนด</label>
+                    <div class="col-sm-8">
+                        <input type="radio" class="btn-check" name="p3_1_sar_format_valid" id="p3_fmt_yes" value="true"
+                            autocomplete="off">
+                        <label class="btn btn-outline-success btn-sm" for="p3_fmt_yes">ใช่</label>
+                        <input type="radio" class="btn-check" name="p3_1_sar_format_valid" id="p3_fmt_no" value="false"
+                            autocomplete="off">
+                        <label class="btn btn-outline-danger btn-sm" for="p3_fmt_no">ไม่ใช่</label>
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label fw-bold">องค์ประกอบของ SAR</label>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="p3_1_sar_composition" value="basic_info">
+                        <label class="form-check-label">ข้อมูลพื้นฐานของสถานศึกษา</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="p3_1_sar_composition"
+                            value="standards_result">
+                        <label class="form-check-label">ผลการประเมินรายมาตรฐานและภาพรวม</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="p3_1_sar_composition"
+                            value="quality_level">
+                        <label class="form-check-label">ระดับคุณภาพ (กำลังพัฒนา/ปานกลาง/ดี/ดีเลิศ/ยอดเยี่ยม)</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="p3_1_sar_composition" value="evidence">
+                        <label class="form-check-label">หลักฐานสนับสนุนผลการประเมิน</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="p3_1_sar_composition"
+                            value="improvement_guide">
+                        <label class="form-check-label">แนวทางพัฒนาคุณภาพให้สูงขึ้นอย่างน้อย 1 ระดับคุณภาพ</label>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">ข้อค้นพบ/ข้อสังเกต</label>
+                    <textarea class="form-control" name="p3_1_note" rows="2"></textarea>
+                </div>
+            </div>
+        </div>
+
+        <!-- Part 4 -->
+        <div class="card mb-4 border-danger">
+            <div class="card-header bg-danger text-white fw-bold">ส่วนที่ 4 การปรับปรุงและพัฒนา (Act)</div>
+            <div class="card-body">
+                <h5 class="text-danger mt-3">4.1 การนำผลการประเมินไปใช้</h5>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" name="p4_1_use_sar_improve_plan">
+                    <label class="form-check-label">นำผล SAR ไปใช้ปรับปรุงแผนพัฒนาการจัดการศึกษา</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" name="p4_1_use_sar_next_year">
+                    <label class="form-check-label">นำผลไปกำหนดแผนปฏิบัติการปีถัดไป</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" name="p4_1_communicate_results">
+                    <label class="form-check-label">มีการสื่อสารผลการประเมินและให้ข้อมูลย้อนกลับแก่ผู้เกี่ยวข้อง</label>
+                </div>
+
+                <h5 class="text-danger mt-3">4.2 การพัฒนาคุณภาพการศึกษาอย่างต่อเนื่อง</h5>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" name="p4_2_has_extension_plan">
+                    <label class="form-check-label">มีแผนงาน/โครงการ/กิจกรรมพัฒนาต่อยอดฯ</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" name="p4_2_continuous_monitoring">
+                    <label class="form-check-label">มีการติดตามผลการพัฒนาคุณภาพการศึกษาอย่างต่อเนื่อง</label>
+                </div>
+                <div class="mb-3 mt-2">
+                    <label class="form-label">ข้อค้นพบ/ข้อสังเกต</label>
+                    <textarea class="form-control" name="p4_2_note" rows="2"></textarea>
+                </div>
+            </div>
+        </div>
+
+        <!-- Part 5 -->
+        <div class="card mb-4 border-secondary">
+            <div class="card-header bg-secondary text-white fw-bold">ส่วนที่ 5 ปัญหา อุปสรรค และความต้องการสนับสนุน
+            </div>
+            <div class="card-body">
+                <div class="mb-3">
+                    <label class="form-label fw-bold">ปัญหา/อุปสรรคในการดำเนินงาน</label>
+                    <textarea class="form-control" name="p5_problems" rows="3"></textarea>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label fw-bold">ความต้องการรับการสนับสนุน/ช่วยเหลือจากหน่วยงานต้นสังกัด</label>
+                    <textarea class="form-control" name="p5_support_needs" rows="3"></textarea>
+                </div>
+            </div>
+        </div>
+
+        <!-- Feedback Section (Read Only for School) -->
+        <div id="feedback-section" style="display:none;">
+            <div class="card mb-4 border-primary">
+                <div class="card-header bg-light fw-bold text-primary">
+                    <i class="bi bi-chat-quote-fill"></i> ข้อเสนอแนะจากต้นสังกัด
+                </div>
+                <div class="card-body">
+                    <div class="mb-3">
+                        <label class="fw-bold text-success">ข้อเสนอแนะจากสหวิทยาเขต (Area):</label>
+                        <div id="display-area-comment" class="alert alert-light border">รอการนิเทศ</div>
+                    </div>
+                    <div class="mb-3">
+                        <label class="fw-bold text-warning">ข้อเสนอแนะจากเขตพื้นที่ (Admin):</label>
+                        <div id="display-admin-comment" class="alert alert-light border">รอการนิเทศ</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="d-grid gap-2 mb-5">
+            <button type="submit" class="btn btn-primary btn-lg"><i class="bi bi-save"></i> บันทึกข้อมูล</button>
+        </div>
+
+    </form>
+</div>

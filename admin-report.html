@@ -1,0 +1,41 @@
+<div class="app-title">
+    <div class="title-h">
+        <h1><i class="bi bi-clipboard-check"></i> ตรวจสอบรายงานการนิเทศ</h1>
+        <p>ดูและตรวจสอบรายงานจากโรงเรียนและสหวิทยาเขตทั้งหมด</p>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="tile">
+            <div class="mb-4">
+                <label class="form-label fw-bold"><i class="bi bi-geo-alt-fill"></i> 1. เลือกสหวิทยาเขต</label>
+                <select id="area-select" class="form-select form-select-lg">
+                    <option value="">กำลังโหลด...</option>
+                </select>
+            </div>
+
+            <div class="mb-4">
+                <label class="form-label fw-bold"><i class="bi bi-building"></i> 2. เลือกโรงเรียน</label>
+                <select id="school-select" class="form-select form-select-lg" disabled>
+                    <option value="">-- กรุณาเลือกสหวิทยาเขตก่อน --</option>
+                </select>
+            </div>
+
+            <div class="mb-4">
+                <label class="form-label fw-bold"><i class="bi bi-list-check"></i> เลือกนโยบาย</label>
+                <div id="policy-buttons" class="btn-group-vertical w-100" role="group">
+                    <!-- Policy buttons will be loaded here -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <div id="report-container">
+            <!-- Reports will be loaded here -->
+        </div>
+    </div>
+</div>

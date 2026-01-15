@@ -1,0 +1,184 @@
+<div class="app-title">
+    <div class="title-h">
+        <h1><i class="bi bi-gender-ambiguous"></i> แบบสำรวจการจัดการเรียนรู้เพศวิถีศึกษา</h1>
+        <p>สำหรับสถานศึกษา</p>
+    </div>
+</div>
+
+<div class="tile">
+    <form id="sexualityForm">
+        <!-- Part 1 -->
+        <h5 class="tile-title text-primary mt-3">ตอนที่ ๑ การจัดการเรียนการสอน</h5>
+        <div class="mb-4 p-3 bg-light rounded border">
+            <p>สถานศึกษา จัดให้มีการเรียนการสอนเพศวิถีและทักษะชีวิตให้เหมาะสมกับช่วงวัยของนักเรียน...</p>
+
+            <div class="form-check mb-2">
+                <input class="form-check-input" type="radio" name="p1_status" id="p1_not_implemented"
+                    value="not_implemented">
+                <label class="form-check-label" for="p1_not_implemented">ไม่ได้ดำเนินการ</label>
+            </div>
+            <div class="ms-4 mb-3" id="p1_reason_div" style="display:none;">
+                <input type="text" class="form-control form-control-sm" name="p1_reason"
+                    placeholder="ระบุเหตุผลความจำเป็น...">
+            </div>
+
+            <div class="form-check mb-2">
+                <input class="form-check-input" type="radio" name="p1_status" id="p1_implemented" value="implemented">
+                <label class="form-check-label"
+                    for="p1_implemented">จัดกิจกรรมเสริมหลักสูตรในรูปแบบของโครงการหรือกิจกรรม</label>
+            </div>
+            <div class="ms-4 mb-3" id="p1_detail_div" style="display:none;">
+                <input type="text" class="form-control form-control-sm" name="p1_project_names"
+                    placeholder="ระบุกิจกรรม/โครงการ/ระดับชั้น...">
+            </div>
+        </div>
+
+        <!-- Part 2 -->
+        <h5 class="tile-title text-primary mt-3">ตอนที่ ๒ การพัฒนาครูผู้สอน</h5>
+        <div class="mb-4 p-3 bg-light rounded border">
+            <p>สถานศึกษาจัดหาและพัฒนาครูผู้สอนให้มีความรู้ความสามารถ...</p>
+
+            <div class="form-check mb-2">
+                <input class="form-check-input" type="radio" name="p2_status" id="p2_not_implemented"
+                    value="not_implemented">
+                <label class="form-check-label" for="p2_not_implemented">ไม่ได้ดำเนินการ</label>
+            </div>
+            <div class="ms-4 mb-3" id="p2_reason_div" style="display:none;">
+                <input type="text" class="form-control form-control-sm" name="p2_reason"
+                    placeholder="ระบุเหตุผลความจำเป็น...">
+            </div>
+
+            <div class="form-check mb-2">
+                <input class="form-check-input" type="radio" name="p2_status" id="p2_implemented" value="implemented">
+                <label class="form-check-label" for="p2_implemented">วิธีการจัดหาและพัฒนาครู</label>
+            </div>
+            <div class="ms-4 mb-3" id="p2_detail_div" style="display:none;">
+                <input type="text" class="form-control form-control-sm" name="p2_method"
+                    placeholder="ระบุวิธีการ (เช่น ส่งอบรม, นิเทศภายใน)...">
+            </div>
+        </div>
+
+        <!-- Part 3 -->
+        <h5 class="tile-title text-primary mt-3">ตอนที่ ๓ การอบรมผ่านโปรแกรมพัฒนาครูเพศวิถีศึกษาแบบออนไลน์</h5>
+        <div class="mb-4 p-3 bg-light rounded border">
+            <p>ทางเว็บไซต์ http://cse-elearning.obec.go.th</p>
+
+            <div class="form-check mb-2">
+                <input class="form-check-input" type="radio" name="p3_status" id="p3_not_implemented"
+                    value="not_implemented">
+                <label class="form-check-label" for="p3_not_implemented">ไม่ได้ดำเนินการ</label>
+            </div>
+            <div class="ms-4 mb-3" id="p3_reason_div" style="display:none;">
+                <input type="text" class="form-control form-control-sm" name="p3_reason"
+                    placeholder="ระบุเหตุผลความจำเป็น...">
+            </div>
+
+            <div class="form-check mb-2">
+                <input class="form-check-input" type="radio" name="p3_status" id="p3_implemented" value="implemented">
+                <label class="form-check-label" for="p3_implemented">ลงทะเบียน และอยู่ระหว่างการอบรม</label>
+            </div>
+
+            <div id="p3_tables" style="display:none;">
+                <div class="row align-items-center mb-2">
+                    <div class="col-auto"><label>จำนวน (คน)</label></div>
+                    <div class="col-auto"><input type="number" class="form-control form-control-sm" style="width:100px;"
+                            name="p3_training_count"></div>
+                </div>
+
+                <!-- Table 1 -->
+                <label class="fw-bold mt-2">รายชื่อผู้ลงทะเบียน/กำลังอบรม</label>
+                <div class="table-responsive mb-3">
+                    <table class="table table-bordered table-sm" id="p3_table1">
+                        <thead class="table-light">
+                            <tr>
+                                <th>ชื่อ - นามสกุล</th>
+                                <th>ตำแหน่ง/หน้าที่</th>
+                                <th>จำนวนหน่วยที่อบรมแล้ว (1-8)</th>
+                                <th>จำนวนแผนการจัดการเรียนรู้ที่ส่งแล้ว</th>
+                                <th style="width:50px;"></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Rows -->
+                        </tbody>
+                    </table>
+                    <button type="button" class="btn btn-sm btn-success" onclick="addP3Row1()"><i
+                            class="bi bi-plus"></i> เพิ่มแถว</button>
+                </div>
+
+                <!-- Checkbox Passed -->
+                <div class="form-check mb-2 mt-4">
+                    <input class="form-check-input" type="checkbox" name="p3_passed" id="p3_passed">
+                    <label class="form-check-label fw-bold" for="p3_passed">ผ่านการอบรมแล้ว</label>
+                </div>
+                <div class="row align-items-center mb-2 ms-4">
+                    <div class="col-auto"><label>จำนวน (คน)</label></div>
+                    <div class="col-auto"><input type="number" class="form-control form-control-sm" style="width:100px;"
+                            name="p3_passed_count"></div>
+                </div>
+
+                <!-- Table 2 -->
+                <div class="table-responsive ms-4 mb-3">
+                    <table class="table table-bordered table-sm" id="p3_table2">
+                        <thead class="table-light">
+                            <tr>
+                                <th>ชื่อ - นามสกุล</th>
+                                <th>ตำแหน่ง/หน้าที่ความรับผิดชอบ</th>
+                                <th style="width:50px;"></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Rows -->
+                        </tbody>
+                    </table>
+                    <button type="button" class="btn btn-sm btn-success" onclick="addP3Row2()"><i
+                            class="bi bi-plus"></i> เพิ่มแถว</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Part 4 -->
+        <h5 class="tile-title text-primary mt-3">ตอนที่ ๔ การจัดการเรียนรู้เพศวิถีศึกษาของสถานศึกษาแต่ละระดับชั้น</h5>
+        <div class="mb-4 p-3 bg-light rounded border">
+
+            <ul class="nav nav-tabs mb-3" id="gradeTabs" role="tablist">
+                <li class="nav-item" role="presentation"><button class="nav-link active" id="m1-tab"
+                        data-bs-toggle="tab" data-bs-target="#m1-pane" type="button">ม.1</button></li>
+                <li class="nav-item" role="presentation"><button class="nav-link" id="m2-tab" data-bs-toggle="tab"
+                        data-bs-target="#m2-pane" type="button">ม.2</button></li>
+                <li class="nav-item" role="presentation"><button class="nav-link" id="m3-tab" data-bs-toggle="tab"
+                        data-bs-target="#m3-pane" type="button">ม.3</button></li>
+                <li class="nav-item" role="presentation"><button class="nav-link" id="m4-tab" data-bs-toggle="tab"
+                        data-bs-target="#m4-pane" type="button">ม.4</button></li>
+                <li class="nav-item" role="presentation"><button class="nav-link" id="m5-tab" data-bs-toggle="tab"
+                        data-bs-target="#m5-pane" type="button">ม.5</button></li>
+                <li class="nav-item" role="presentation"><button class="nav-link" id="m6-tab" data-bs-toggle="tab"
+                        data-bs-target="#m6-pane" type="button">ม.6</button></li>
+            </ul>
+
+            <div class="tab-content" id="gradeTabContent">
+                <!-- Javascript will generate tab panes to avoid code duplication -->
+            </div>
+
+        </div>
+
+        <!-- Part 5 -->
+        <h5 class="tile-title text-primary mt-3">ตอนที่ ๕ ปัญหา อุปสรรค และความต้องการสนับสนุน</h5>
+        <div class="mb-4 p-3 bg-light rounded border">
+            <div class="mb-3">
+                <label class="form-label fw-bold">ปัญหาและอุปสรรคของการจัดการเรียนการสอนเพศวิถีศึกษาของสถานศึกษา</label>
+                <textarea class="form-control" rows="4" name="p5_problems"></textarea>
+            </div>
+            <div class="mb-3">
+                <label class="form-label fw-bold">ความต้องการรับสนับสนุน/ช่วยเหลือจากหน่วยงานต้นสังกัด</label>
+                <textarea class="form-control" rows="4" name="p5_needs"></textarea>
+            </div>
+        </div>
+
+        <div class="tile-footer text-end mt-4">
+            <button class="btn btn-primary btn-lg" type="button" onclick="saveSexualityForm()">
+                <i class="bi bi-save"></i> บันทึกข้อมูล
+            </button>
+        </div>
+    </form>
+</div>

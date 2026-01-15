@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta name="description"
+    content="Vali is a responsive and free admin theme built with Bootstrap 5, SASS and PUG.js. It's fully customizable and modular.">
+  <!-- Twitter meta-->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:site" content="@pratikborsadiya">
+  <meta property="twitter:creator" content="@pratikborsadiya">
+  <!-- Open Graph Meta-->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Vali Admin">
+  <meta property="og:title" content="Vali - Free Bootstrap 5 admin theme">
+  <meta property="og:url" content="http://pratikborsadiya.in/blog/vali-admin">
+  <meta property="og:image" content="http://pratikborsadiya.in/blog/vali-admin/hero-social.png">
+  <meta property="og:description"
+    content="Vali is a responsive and free admin theme built with Bootstrap 5, SASS and PUG.js. It's fully customizable and modular.">
+  <title> Evaluation SPM_PLK_UTT </title>
+  <link rel="icon" type="image/png" href="https://img5.pic.in.th/file/secure-sv1/Untitled-design0bb67699eadca36d.png">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Main CSS-->
+  <link rel="stylesheet" type="text/css" href="css/main.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <!-- Font-icon css-->
+  <link rel="stylesheet" type="text/css"
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+
+  <!-- Essential javascripts for application to work-->
+  <meta charset="UTF-8">
+  <!--  ลองใช้แค่ main.css
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"> -->
+
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <!--  แสดงชาร์จเมนูสรุป -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+
+
+
+
+<body class="app sidebar-mini">
+
+
+  <!-- Navbar-->
+  <header class="app-header">
+    <a class="app-header__logo" href="dashboard.html"> Evalution SPM </a>
+    <!-- Sidebar toggle button--><a class="app-sidebar__toggle" href="#" data-toggle="sidebar"
+      aria-label="Hide Sidebar"></a>
+
+  </header>
+
+  <!-- Sidebar menu-->
+  <div class="app-sidebar__overlay" data-toggle="sidebar"></div>
+  <aside class="app-sidebar">
+
+    <div class="app-sidebar__user">
+      <div class="box_center">
+        <img class="app-sidebar__user-avatar mb-3"
+          src="https://img5.pic.in.th/file/secure-sv1/Untitled-design0bb67699eadca36d.png">
+        <p class="app-sidebar__user-name" id="School1"> </p>
+        <p class="app-sidebar__user-designation fs-6" id="Area1"> </p>
+      </div>
+    </div>
+
+    <ul class="app-menu">
+      <li>
+        <a class="app-menu__item" href="#home">
+          <i class="app-menu__icon bi bi-house-heart-fill"></i> <span class="app-menu__label"> หน้าหลัก </span>
+        </a>
+      </li>
+      <li class="treeview">
+        <a class="app-menu__item" href="#page-user">
+          <i class="app-menu__icon bi bi-person-bounding-box"></i> <span class="app-menu__label"> จัดการข้อมูล </span>
+        </a>
+      </li>
+      <li class="treeview">
+        <a class="app-menu__item" href="#form-report">
+          <i class="app-menu__icon bi bi-ui-checks"></i> <span class="app-menu__label">แบบประเมินการนิเทศ </span>
+        </a>
+      </li>
+      <li class="treeview">
+      <li><a class="app-menu__item" href="#qa-form"><i class="app-menu__icon bi bi-clipboard-check"></i><span
+            class="app-menu__label">ประกันคุณภาพภายใน</span></a></li>
+      <li><a class="app-menu__item" href="#sexuality-form"><i class="app-menu__icon bi bi-gender-ambiguous"></i><span
+            class="app-menu__label">เพศวิถีศึกษา</span></a></li>
+
+      <li><a class="app-menu__item" href="#form-summary"><i class="app-menu__icon bi bi-file-earmark-text"></i><span
+            class="app-menu__label">สรุปรายงานการนิเทศ</span></a></li>
+
+      <li><a class="app-menu__item" href="#" id="logoutBT"><i class="app-menu__icon bi bi-box-arrow-right"></i><span
+            class="app-menu__label">ออกจากระบบ</span></a></li>
+    </ul>
+  </aside>
+
+
+
+  <!-- Content -->
+  <main class="app-content">
+
+    <div id="content">
+      <!-- เนื้อหาจากหน้าอื่นจะถูกโหลดตรงนี้ -->
+    </div>
+
+
+  </main>
+
+
+
+
+  <div class="text-center _copyright"> โปรแกรมนิเทศ ติดตาม และประเมินผลการจัดการศึกษา <br>
+    พัฒนาโดย นายอนลัส คาลเคล ศึกษานิเทศก์ชำนาญการ <br>
+    สำนักงานเขตพื้นที่การศึกษามัธยมศึกษาพิษณุโลก อุตรดิตถ์ <br>
+    © 2025 All rights reserved. </div>
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"></script>
+
+
+
+  <!-- Essential javascripts for application to work-->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="js/config.js"></script>
+  <script src="js/init-supabase.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/main.js"></script>
+
+  <!-- Login / ConnectDB-->
+  <script src="js/login.js"></script>
+  <script src="js/db.js"></script>
+  <script src="js/form-policy-data.js"></script>
+  <script src="js/form-summary-s.js"></script>
+
+  <script>
+    window.scriptURL = CONFIG.API_URL;
+  </script>
+
+  <script>
+    const loadPage = async () => {
+
+      const userID = localStorage.getItem("UserID");
+      if (!userID) {
+        alert("ไม่พบข้อมูลผู้ใช้ กรุณาเข้าสู่ระบบใหม่");
+        window.location.href = "index.html";
+        return;
+      }
+
+      const page = location.hash.slice(1) || 'home';
+      const res = await fetch(`${page}.html`);
+      const html = await res.text();
+      document.getElementById('content').innerHTML = html;
+
+      // ลบ script ที่เคยโหลดมาก่อนหน้านี้
+
+      const oldScript = document.getElementById('page-script');
+      if (oldScript) oldScript.remove();
+
+      let scriptSrc = '';
+
+      // โหลด JS พิเศษเฉพาะหน้า
+      if (page === 'page-user') scriptSrc = 'js/edit-user.js';
+      else if (page === 'form-report') scriptSrc = 'js/form-report-s.js';
+      else if (page === 'form-summary') scriptSrc = 'js/form-summary-s.js';
+      else if (page === 'qa-form') scriptSrc = 'js/qa-form.js';
+      else if (page === 'sexuality-form') scriptSrc = 'js/sexuality-form.js';
+      //else if (page === 'home') scriptSrc = 'js/main.js';
+
+      // ✅ ถ้าเป็นหน้าที่ต้องใช้ policies ให้โหลด js/policy-data.js ก่อน
+      const needsPolicy = ['form-report', 'form-summary'].includes(page);
+
+      if (scriptSrc) {
+        if (needsPolicy) {
+          const policyScript = document.createElement('script');
+          policyScript.src = 'js/form-policy-data.js';
+          policyScript.onload = () => {
+            const mainScript = document.createElement('script');
+            mainScript.id = 'page-script';
+            mainScript.src = scriptSrc + '?v=' + new Date().getTime();  // ป้องกัน cache
+            document.body.appendChild(mainScript);
+          };
+          document.body.appendChild(policyScript);
+        } else {
+          const script = document.createElement('script');
+          script.id = 'page-script';
+          script.src = scriptSrc + '?v=' + Date.now();
+          document.body.appendChild(script);
+        }
+      }
+    };
+
+    window.addEventListener('load', loadPage);
+    window.addEventListener('hashchange', loadPage);
+  </script>
+
+
+</body>
+
+</html>
